@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scaffolding Company In Qatar | Sixco Group</title>
+<meta name="description" content="Sixco Group – Qatar's trusted scaffolding company. Rental, sales, erection & dismantling. ISO certified. Serving Doha and across the GCC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --dark: #0E1117;
+    --dark-2: #161B24;
+    --dark-3: #1E2533;
+    --steel: #2E3A4E;
+    --text: #E8EAF0;
+    --text-muted: #8A94A8;
+    --white: #FFFFFF;
+    --accent: #C9A84C;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(14,17,23,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--dark) !important;
+    padding: 10px 22px;
+    border-radius: 2px;
+    font-weight: 700 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--dark) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 5% 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0E1117 0%, #161B24 50%, #1a1f2e 100%);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 55%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80') center/cover no-repeat;
+    opacity: 0.15;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(to right, var(--dark) 0%, transparent 60%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.35);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 800;
+    line-height: 0.95;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero p {
+    font-size: 17px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--dark);
+    padding: 16px 36px;
+    border-radius: 2px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    border: 1.5px solid rgba(201,168,76,0.5);
+    color: var(--gold);
+    padding: 16px 36px;
+    border-radius: 2px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+    display: inline-block;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    background: rgba(201,168,76,0.08);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-top: 64px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+    font-weight: 700;
+  }
+
+  /* SECTION COMMONS */
+  section { padding: 100px 5%; }
+
+  .section-tag {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 580px;
+    font-weight: 300;
+  }
+
+  /* SERVICES */
+  .services { background: var(--dark-2); }
+
+  .services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 64px;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+  }
+
+  .service-card {
+    background: var(--dark-3);
+    padding: 48px 36px;
+    border-top: 3px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+    cursor: default;
+  }
+
+  .service-card:hover {
+    border-top-color: var(--gold);
+    background: var(--steel);
+  }
+
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  .service-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 14px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ABOUT */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    padding: 100px 5%;
+    background: var(--dark);
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 2px;
+    filter: grayscale(20%);
+  }
+
+  .about-accent {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 160px;
+    height: 160px;
+    background: var(--gold);
+    z-index: -1;
+    border-radius: 2px;
+  }
+
+  .cert-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+
+  .cert {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 8px 14px;
+    border-radius: 2px;
+  }
+
+  /* PROJECTS */
+  .projects { background: var(--dark-2); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 56px;
+  }
+
+  .project-item {
+    background: var(--dark-3);
+    padding: 28px 24px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.25s, background 0.25s;
+  }
+
+  .project-item:hover {
+    border-left-color: var(--gold);
+    background: var(--steel);
+  }
+
+  .project-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(201,168,76,0.4);
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+
+  .project-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  /* WHY */
+  .why { background: var(--dark); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .why-list {
+    list-style: none;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .why-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .why-icon {
+    min-width: 40px;
+    height: 40px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 2px;
+  }
+
+  .why-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .why-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .why-visual {
+    background: var(--dark-3);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 2px;
+    padding: 48px;
+  }
+
+  .why-visual h3 {
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .why-visual p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .contact-ico {
+    width: 38px;
+    height: 38px;
+    background: rgba(201,168,76,0.1);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .contact-row span {
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  .contact-row strong {
+    display: block;
+    font-size: 15px;
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: var(--gold);
+    padding: 80px 5%;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-bottom: 16px;
+  }
+
+  .cta-section p {
+    font-size: 18px;
+    color: rgba(14,17,23,0.7);
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .btn-dark {
+    background: var(--dark);
+    color: var(--gold);
+    padding: 18px 48px;
+    border-radius: 2px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.15s;
+  }
+
+  .btn-dark:hover { transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark-2);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 64px 5% 36px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 48px;
+  }
+
+  .footer-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .footer-logo span { color: var(--gold); }
+
+  .footer-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-weight: 300;
+    max-width: 300px;
+  }
+
+  .footer-col h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-col ul { list-style: none; }
+
+  .footer-col ul li {
+    margin-bottom: 12px;
+  }
+
+  .footer-col ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    transition: color 0.2s;
+  }
+
+  .footer-col ul li a:hover { color: var(--gold); }
+
+  .footer-col address {
+    font-style: normal;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .footer-col address a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* Scaffolding types bar */
+  .types-bar {
+    background: var(--dark-3);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 20px 5%;
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .type-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .type-tag::before {
+    content: '';
+    width: 5px; height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 900px) {
+    .about { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+    .hero-stats { gap: 28px; }
+    .nav-links { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .projects-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">SIXCO<span>GROUP</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Qatar's Trusted Scaffolding Partner</div>
+    <h1>Safe. Smart. <em>Scalable.</em></h1>
+    <p>Delivering safe and reliable scaffolding solutions across Qatar and the GCC — for construction, industrial, and event projects of every scale.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">Our Services</a>
+      <a href="#contact" class="btn-outline">Get a Quote</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div>
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div>
+        <div class="stat-num">ISO</div>
+        <div class="stat-label">Certified QHSE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCAFFOLD TYPES BAR -->
+<div class="types-bar">
+  <span class="type-tag">Cuplock Scaffolding</span>
+  <span class="type-tag">Ringlock Scaffolding</span>
+  <span class="type-tag">Formwork Systems</span>
+  <span class="type-tag">Aluminium Mobile Towers</span>
+  <span class="type-tag">Event Scaffolding</span>
+  <span class="type-tag">Industrial Access</span>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header">
+    <div>
+      <div class="section-tag">What We Do</div>
+      <div class="section-title">Complete Access<br>Solutions</div>
+    </div>
+    <p class="section-sub">From rental to erection, inspection to sales — we handle every aspect of scaffolding for your project, on time and to the highest safety standards.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🏗</div>
+      <h3>Scaffolding Rental</h3>
+      <p>Extensive range of high-quality scaffolding materials available for rent. Flexible terms tailored to your project schedule and budget requirements.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <h3>Erection & Dismantling</h3>
+      <p>Dedicated crews equipped to erect and dismantle scaffolding safely and efficiently, minimising downtime on your construction site.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Scaffolding Sales</h3>
+      <p>Premium scaffolding products for purchase. Full product specifications including weight capacity, dimensions and assembly instructions provided.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎪</div>
+      <h3>Event Scaffolding</h3>
+      <p>Specialized scaffolding for concerts, sporting events, graduation ceremonies, trade exhibitions and large-scale public events across Qatar.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔍</div>
+      <h3>Inspection & Certification</h3>
+      <p>Third-party inspection and certification services ensuring your scaffolding meets all safety and regulatory standards required in Qatar.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📋</div>
+      <h3>Project Consultation</h3>
+      <p>Expert consultation from planning to completion. Our experienced team helps you choose the right scaffolding solution for every job.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="about" id="about">
+  <div class="about-visual">
+    <img class="about-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Sixco Group Scaffolding Qatar">
+    <div class="about-accent"></div>
+  </div>
+  <div class="about-text">
+    <div class="section-tag">About Sixco Group</div>
+    <div class="section-title">Building Smarter with Affordable Solutions</div>
+    <p class="section-sub" style="margin-top: 16px;">At SIXCO, we take pride in offering the most competitive prices in the region. As the leading supplier of scaffolding materials in Qatar, our sales division is committed to delivering cost-effective products and services paired with safe and efficient solutions for all your construction needs.</p>
+    <p style="font-size: 14px; color: var(--text-muted); margin-top: 20px; line-height: 1.7; font-weight: 300;">We prioritize customer satisfaction at every step. From product selection to after-sales support, our experienced team is here to assist you every step of the way — ensuring you find the perfect scaffolding solution for your project, across Qatar, the GCC and India.</p>
+    <div class="cert-badges">
+      <span class="cert">ISO 9001:2015</span>
+      <span class="cert">ISO 45001:2018</span>
+      <span class="cert">ISO 14001:2015</span>
+      <span class="cert">BS/EN Compliant</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="section-tag">Our Work</div>
+  <div class="section-title">Notable Projects</div>
+  <p class="section-sub" style="margin-top: 12px;">Trusted by Qatar's most prestigious developments — from world-class sports venues to landmark commercial and government projects.</p>
+  <div class="projects-grid">
+    <div class="project-item"><div class="project-num">01</div><h4>Khalifa Tennis Stadium</h4></div>
+    <div class="project-item"><div class="project-num">02</div><h4>Katara Cultural Village</h4></div>
+    <div class="project-item"><div class="project-num">03</div><h4>Centre Point Barwa Village</h4></div>
+    <div class="project-item"><div class="project-num">04</div><h4>Al Shamal Sports Club</h4></div>
+    <div class="project-item"><div class="project-num">05</div><h4>Hamad Medical Corporation</h4></div>
+    <div class="project-item"><div class="project-num">06</div><h4>Sheraton Doha</h4></div>
+    <div class="project-item"><div class="project-num">07</div><h4>Qatar Rail</h4></div>
+    <div class="project-item"><div class="project-num">08</div><h4>Qatar Energy HQ</h4></div>
+    <div class="project-item"><div class="project-num">09</div><h4>HIA Pier's</h4></div>
+    <div class="project-item"><div class="project-num">10</div><h4>Grand Mosque Qatar</h4></div>
+    <div class="project-item"><div class="project-num">11</div><h4>Yasmeen City</h4></div>
+    <div class="project-item"><div class="project-num">12</div><h4>Qatar Gas Ritz Project</h4></div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="contact">
+  <div class="why-grid">
+    <div>
+      <div class="section-tag">Why Choose Us</div>
+      <div class="section-title">Your Partner for Quality & Value</div>
+      <ul class="why-list">
+        <li class="why-item">
+          <div class="why-icon">💰</div>
+          <div>
+            <h4>Cost-Effective Solutions</h4>
+            <p>Competitively priced rental services with flexible terms tailored to your schedule and financial plan — quality scaffolding without heavy upfront investment.</p>
+          </div>
+        </li>
+        <li class="why-item">
+          <div class="why-icon">🛡</div>
+          <div>
+            <h4>ISO Certified Safety</h4>
+            <p>All systems are BS/EN compliant and follow ISO-certified QHSE standards, ensuring top-tier safety and quality on every project.</p>
+          </div>
+        </li>
+        <li class="why-item">
+          <div class="why-icon">🌍</div>
+          <div>
+            <h4>GCC-Wide Coverage</h4>
+            <p>Serving Qatar, the GCC and India. Fully equipped to manage industrial, commercial and large-scale construction projects of any size.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="why-visual">
+      <h3>Get in Touch</h3>
+      <p>Ready to start your project? Our team is available to provide a free quote and expert consultation.</p>
+      <div class="contact-info">
+        <div class="contact-row">
+          <div class="contact-ico">📞</div>
+          <div>
+            <span>Call Us</span>
+            <strong>+974 30643360</strong>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-ico">✉️</div>
+          <div>
+            <span>Email Us</span>
+            <strong>info@sixcogroup.com</strong>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-ico">📍</div>
+          <div>
+            <span>Address</span>
+            <strong>P.O Box 37071, Doha, Qatar</strong>
+          </div>
+        </div>
+      </div>
+      <a href="mailto:info@sixcogroup.com" class="btn-primary" style="width: 100%; text-align: center;">Send Us a Message</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-section">
+  <h2>Ready to Start Your Next Project?</h2>
+  <p>Get a free consultation and quote from Qatar's most trusted scaffolding company.</p>
+  <a href="tel:+97430643360" class="btn-dark">Call +974 30643360</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">SIXCO<span>GROUP</span></div>
+      <p class="footer-desc">Your trusted partner for efficient, compliant and cost-effective scaffolding systems across Qatar and the GCC.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#projects">Our Projects</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <address>
+        P.O Box 37071<br>
+        Doha, State of Qatar<br><br>
+        <a href="tel:+97430643360">+974 30643360</a><br>
+        <a href="mailto:info@sixcogroup.com">info@sixcogroup.com</a>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright 2025 © Sixco Group. All rights reserved.</p>
+    <p style="color: rgba(138,148,168,0.5); font-size: 12px;">Scaffolding Company in Qatar</p>
+  </div>
+</footer>
+
+</body>
+</html>
